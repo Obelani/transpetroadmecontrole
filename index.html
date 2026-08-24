@@ -111,7 +111,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
     }
   }
   .animate-scroll {
-    animation: scroll 20s linear infinite;
+    animation: scroll 16s linear infinite;
   }
   .carousel-maps {
     display: flex;
@@ -235,7 +235,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
 <body class="antialiased bg-slate-100">
 
   <!-- URGÊNCIA BANNER -->
-  <div class="bg-navy-900 text-white py-3 px-4 text-center sticky top-0 z-50">
+  <div class="bg-navy-900 text-white py-3 px-5 sm:px-4 text-center sticky top-0 z-50">
     <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase">
       <span>🚨 PROVA 29/11 · ADMINISTRAÇÃO E CONTROLE · FALTAM 98 DIAS</span>
     </div>
@@ -243,11 +243,11 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
 
   <!-- HERO -->
   <section class="pt-6 sm:pt-10 md:pt-16 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-b from-navy-900 via-navy-800 to-slate-100 overflow-hidden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 md:px-8">
       <div class="flex flex-col items-center justify-center">
         
         <!-- TEXTO CENTRALIZADO -->
-        <div class="text-white max-w-2xl text-center">
+        <div class="text-white w-full max-w-2xl text-center">
           <div class="inline-flex items-center gap-2 bg-teal-600/20 border border-teal-500 rounded-full px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs">
             <svg class="w-3 h-3 sm:w-4 sm:h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
             <span class="font-bold">ESPECIALIZADO NESTE CARGO</span>
@@ -264,7 +264,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
           </p>
 
           <!-- BANNER DESTAQUE -->
-          <div class="mb-6 sm:mb-8 w-full max-w-xl mx-auto px-3 sm:px-4">
+          <div class="mb-6 sm:mb-8 w-full max-w-md sm:max-w-lg mx-auto">
             <img src="banner_1.webp" alt="Banner de urgência" class="w-full h-auto rounded-lg shadow-lg object-cover" onerror="this.style.display='none'">
           </div>
 
@@ -741,56 +741,58 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         </div>
 
         <!-- PLANO COMPLETO -->
-        <div class="plano-destaque bg-white rounded-2xl overflow-hidden transition border-4 border-gold-400 relative lg:scale-105 z-10">
-          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase shadow-lg whitespace-nowrap">
+        <div class="relative lg:scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase shadow-lg whitespace-nowrap z-20">
             🔥 Escolha de 87% dos Aprovados
           </div>
 
-          <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-4 sm:p-6 md:p-8 pt-6 sm:pt-8">
-            <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">⭐ Plano Completo</h3>
-            <p class="text-sm sm:text-base font-semibold">Tudo para sua aprovação GARANTIDA</p>
-          </div>
+          <div class="plano-destaque bg-white rounded-2xl overflow-hidden transition border-4 border-gold-400">
+            <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-4 sm:p-6 md:p-8 pt-6 sm:pt-8">
+              <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">⭐ Plano Completo</h3>
+              <p class="text-sm sm:text-base font-semibold">Tudo para sua aprovação GARANTIDA</p>
+            </div>
 
-          <div class="p-4 sm:p-6 md:p-8">
-            <div class="mb-5 sm:mb-6">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="text-xs sm:text-sm text-slate-500 line-through">De R$ 69</span>
-                <span class="bg-red-50 text-red-600 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">Economize R$ 41,10</span>
+            <div class="p-4 sm:p-6 md:p-8">
+              <div class="mb-5 sm:mb-6">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs sm:text-sm text-slate-500 line-through">De R$ 69</span>
+                  <span class="bg-red-50 text-red-600 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">Economize R$ 41,10</span>
+                </div>
+                <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gold-500 mb-2">R$ 27,90</div>
+                <p class="text-xs sm:text-sm text-slate-600">ou 3x de R$ 9,30 sem juros</p>
               </div>
-              <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gold-500 mb-2">R$ 27,90</div>
-              <p class="text-xs sm:text-sm text-slate-600">ou 3x de R$ 9,30 sem juros</p>
+
+              <div class="bg-gold-400/10 border border-gold-400/40 rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 mb-5 sm:mb-6 text-center">
+                <p class="text-navy-900 font-bold text-xs sm:text-sm">🎁 + 4 Bônus Grátis inclusos hoje</p>
+              </div>
+
+              <ul class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                <li class="flex items-start gap-2 sm:gap-3">
+                  <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                  <span class="text-slate-700 text-sm sm:text-base"><strong>95 Mapas + 4 Bônus</strong><br/><span class="text-xs sm:text-sm text-slate-600">Cronograma, Questões, Simulado, Checklist</span></span>
+                </li>
+                <li class="flex items-start gap-2 sm:gap-3">
+                  <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                  <span class="text-slate-700 text-sm sm:text-base"><strong>Pegadinhas Desarmadas</strong><br/><span class="text-xs sm:text-sm text-slate-600">Saiba o que a Cesgranrio costuma cobrar</span></span>
+                </li>
+                <li class="flex items-start gap-2 sm:gap-3">
+                  <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                  <span class="text-slate-700 text-sm sm:text-base"><strong>Simulado 4 Horas</strong><br/><span class="text-xs sm:text-sm text-slate-600">60 questões no formato real da prova</span></span>
+                </li>
+                <li class="flex items-start gap-2 sm:gap-3">
+                  <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                  <span class="text-slate-700 text-sm sm:text-base"><strong>Garantia 7 dias</strong><br/><span class="text-xs sm:text-sm text-slate-600">Ou seu dinheiro de volta, sem pergunta</span></span>
+                </li>
+              </ul>
+
+              <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_COMPLETO_2790&checkoutMode=10" 
+                 onclick="fbq('track', 'AddToCart', {value: 27.90, currency: 'BRL'}); fbq('track', 'InitiateCheckout');" 
+                 class="cta-pulse w-full bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-navy-900 font-bold py-3 sm:py-3.5 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base md:text-lg shadow-lg">
+                🚀 Garantir Minha Aprovação • R$ 27,90
+              </a>
+
+              <p class="text-xs text-slate-500 text-center">Acesso imediato • Pix ou Cartão • Garantia 7 dias</p>
             </div>
-
-            <div class="bg-gold-400/10 border border-gold-400/40 rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 mb-5 sm:mb-6 text-center">
-              <p class="text-navy-900 font-bold text-xs sm:text-sm">🎁 + 4 Bônus Grátis inclusos hoje</p>
-            </div>
-
-            <ul class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-              <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
-                <span class="text-slate-700 text-sm sm:text-base"><strong>95 Mapas + 4 Bônus</strong><br/><span class="text-xs sm:text-sm text-slate-600">Cronograma, Questões, Simulado, Checklist</span></span>
-              </li>
-              <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
-                <span class="text-slate-700 text-sm sm:text-base"><strong>Pegadinhas Desarmadas</strong><br/><span class="text-xs sm:text-sm text-slate-600">Saiba o que a Cesgranrio costuma cobrar</span></span>
-              </li>
-              <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
-                <span class="text-slate-700 text-sm sm:text-base"><strong>Simulado 4 Horas</strong><br/><span class="text-xs sm:text-sm text-slate-600">60 questões no formato real da prova</span></span>
-              </li>
-              <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
-                <span class="text-slate-700 text-sm sm:text-base"><strong>Garantia 7 dias</strong><br/><span class="text-xs sm:text-sm text-slate-600">Ou seu dinheiro de volta, sem pergunta</span></span>
-              </li>
-            </ul>
-
-            <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_COMPLETO_2790&checkoutMode=10" 
-               onclick="fbq('track', 'AddToCart', {value: 27.90, currency: 'BRL'}); fbq('track', 'InitiateCheckout');" 
-               class="cta-pulse w-full bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-navy-900 font-bold py-3 sm:py-3.5 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base md:text-lg shadow-lg">
-              🚀 Garantir Minha Aprovação • R$ 27,90
-            </a>
-
-            <p class="text-xs text-slate-500 text-center">Acesso imediato • Pix ou Cartão • Garantia 7 dias</p>
           </div>
         </div>
 
@@ -911,7 +913,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         carousel.appendChild(clone);
       });
 
-      const speed = 0.72; // pixels por frame (~fluido, velocidade mediana +32%)
+      const speed = 0.864; // pixels por frame (+20% sobre velocidade anterior)
 
       function getHalfWidth() {
         return carousel.scrollWidth / 2;
