@@ -192,6 +192,26 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   .animate-in {
     animation: modalSlideIn 0.3s ease-out;
   }
+
+  /* PLANO COMPLETO - DESTAQUE PERSUASIVO */
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.55), 0 20px 50px -15px rgba(0,31,63,0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 14px rgba(255, 199, 44, 0), 0 20px 50px -15px rgba(0,31,63,0.3);
+    }
+  }
+  .plano-destaque {
+    animation: pulseGlow 2.2s ease-out infinite;
+  }
+  @keyframes ctaPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+  .cta-pulse {
+    animation: ctaPulse 1.6s ease-in-out infinite;
+  }
   
   /* CARROSSEL AUTOMÁTICO */
   @keyframes autoScroll {
@@ -249,29 +269,31 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
           </div>
 
           <!-- MARQUEE BENEFÍCIOS -->
-          <div class="overflow-hidden bg-white/10 backdrop-blur border border-gold-400/30 rounded-lg w-full">
-            <div class="flex gap-3 sm:gap-4 md:gap-6 animate-scroll whitespace-nowrap py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm md:text-base">
-              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
+          <div class="overflow-hidden bg-navy-900 border border-gold-400/40 rounded-lg w-full shadow-lg">
+            <div class="flex gap-3 sm:gap-4 md:gap-6 animate-scroll whitespace-nowrap py-2.5 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm md:text-base">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
                 <span class="text-gold-400">✓</span>
-                <span class="hidden sm:inline">Acesso imediato</span>
-                <span class="sm:hidden">Acesso</span>
+                <span>Tudo em HD para impressão</span>
               </div>
-              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
                 <span class="text-gold-400">✓</span>
-                <span>Edital 2026.3</span>
+                <span>4 Bônus Grátis</span>
               </div>
-              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
                 <span class="text-gold-400">✓</span>
-                <span>Imprimível</span>
+                <span>+ de 1000 Aprovações</span>
               </div>
-              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
                 <span class="text-gold-400">✓</span>
-                <span>Vitalício</span>
+                <span>Tudo em HD para impressão</span>
               </div>
-              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
                 <span class="text-gold-400">✓</span>
-                <span class="hidden sm:inline">Acesso imediato</span>
-                <span class="sm:hidden">Acesso</span>
+                <span>4 Bônus Grátis</span>
+              </div>
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0 text-white">
+                <span class="text-gold-400">✓</span>
+                <span>+ de 1000 Aprovações</span>
               </div>
             </div>
           </div>
@@ -330,35 +352,27 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
       <div class="carousel-maps" id="carMapas">
         <div class="carousel-slide-map">
           <img src="amostra1.webp" alt="Processos Administrativos" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Processos Administrativos</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra2.webp" alt="Finanças e Contabilidade" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Finanças e Contabilidade</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra3.webp" alt="Logística e Suprimento" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Logística e Suprimento</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra4.webp" alt="Informática e LGPD" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Informática e LGPD</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra5.webp" alt="Português" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Português</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra6.webp" alt="Matemática" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Matemática</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra7.webp" alt="Lei de Licitações" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Lei de Licitações</div>
         </div>
         <div class="carousel-slide-map">
           <img src="amostra8.webp" alt="Gestão de Pessoas" class="mapimg" onerror="this.style.display='none'">
-          <div class="text-center mt-2 text-xs font-bold uppercase tracking-wide text-slate-500">Gestão de Pessoas</div>
         </div>
       </div>
     </div>
@@ -481,7 +495,11 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">+ 4 Bônus Exclusivos</h2>
-        <p class="text-slate-600 text-lg">Inclusos no Plano Completo</p>
+        <p class="text-slate-600 text-lg font-semibold">Tudo isso grátis somente hoje</p>
+        <div id="bonusDateBadge" class="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mt-3">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+          <span></span>
+        </div>
       </div>
 
       <div class="grid md:grid-cols-4 gap-6">
@@ -723,46 +741,53 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         </div>
 
         <!-- PLANO COMPLETO -->
-        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition border-3 border-gold-400 relative">
-          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gold-400 text-navy-900 px-4 py-1 rounded-full text-xs font-bold uppercase">
-            ⭐ Mais Recomendado
+        <div class="plano-destaque bg-white rounded-2xl overflow-hidden transition border-4 border-gold-400 relative lg:scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase shadow-lg whitespace-nowrap">
+            🔥 Escolha de 87% dos Aprovados
           </div>
 
-          <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-4 sm:p-6 md:p-8">
-            <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Plano Completo</h3>
+          <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-4 sm:p-6 md:p-8 pt-6 sm:pt-8">
+            <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">⭐ Plano Completo</h3>
             <p class="text-sm sm:text-base font-semibold">Tudo para sua aprovação GARANTIDA</p>
           </div>
 
           <div class="p-4 sm:p-6 md:p-8">
-            <div class="mb-6 sm:mb-8">
-              <div class="text-xs sm:text-sm text-slate-500 line-through mb-1">De R$ 69</div>
+            <div class="mb-5 sm:mb-6">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs sm:text-sm text-slate-500 line-through">De R$ 69</span>
+                <span class="bg-red-50 text-red-600 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">Economize R$ 41,10</span>
+              </div>
               <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gold-500 mb-2">R$ 27,90</div>
-              <p class="text-xs sm:text-sm text-slate-600">ou 3x de R$ 9,30</p>
+              <p class="text-xs sm:text-sm text-slate-600">ou 3x de R$ 9,30 sem juros</p>
+            </div>
+
+            <div class="bg-gold-400/10 border border-gold-400/40 rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 mb-5 sm:mb-6 text-center">
+              <p class="text-navy-900 font-bold text-xs sm:text-sm">🎁 + 4 Bônus Grátis inclusos hoje</p>
             </div>
 
             <ul class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
                 <span class="text-slate-700 text-sm sm:text-base"><strong>95 Mapas + 4 Bônus</strong><br/><span class="text-xs sm:text-sm text-slate-600">Cronograma, Questões, Simulado, Checklist</span></span>
               </li>
               <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
                 <span class="text-slate-700 text-sm sm:text-base"><strong>Pegadinhas Desarmadas</strong><br/><span class="text-xs sm:text-sm text-slate-600">Saiba o que a Cesgranrio costuma cobrar</span></span>
               </li>
               <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
                 <span class="text-slate-700 text-sm sm:text-base"><strong>Simulado 4 Horas</strong><br/><span class="text-xs sm:text-sm text-slate-600">60 questões no formato real da prova</span></span>
               </li>
               <li class="flex items-start gap-2 sm:gap-3">
-                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
                 <span class="text-slate-700 text-sm sm:text-base"><strong>Garantia 7 dias</strong><br/><span class="text-xs sm:text-sm text-slate-600">Ou seu dinheiro de volta, sem pergunta</span></span>
               </li>
             </ul>
 
             <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_COMPLETO_2790&checkoutMode=10" 
                onclick="fbq('track', 'AddToCart', {value: 27.90, currency: 'BRL'}); fbq('track', 'InitiateCheckout');" 
-               class="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base md:text-lg">
-              Garantir Aprovação • R$ 27,90
+               class="cta-pulse w-full bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-navy-900 font-bold py-3 sm:py-3.5 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base md:text-lg shadow-lg">
+              🚀 Garantir Minha Aprovação • R$ 27,90
             </a>
 
             <p class="text-xs text-slate-500 text-center">Acesso imediato • Pix ou Cartão • Garantia 7 dias</p>
@@ -910,6 +935,21 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
 
     // Iniciar quando página carrega
     document.addEventListener('DOMContentLoaded', initAutoCarousel);
+
+    // DATA DINÂMICA - Mostra a data que o lead está acessando
+    function exibirDataAtual() {
+      const badge = document.getElementById('bonusDateBadge');
+      if (!badge) return;
+      const span = badge.querySelector('span');
+      const hoje = new Date();
+      const dias = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+      const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+      const diaSemana = dias[hoje.getDay()];
+      const dia = hoje.getDate();
+      const mes = meses[hoje.getMonth()];
+      span.textContent = 'Oferta válida hoje, ' + diaSemana + ', ' + dia + ' de ' + mes;
+    }
+    document.addEventListener('DOMContentLoaded', exibirDataAtual);
 
     // MODAL UPSELL
     function openUpsellModal() {
