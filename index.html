@@ -93,6 +93,77 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
     font-weight: bold;
     margin-right: 0.5rem;
   }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+  .carousel-maps {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .carousel-maps::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-slide-map {
+    flex-shrink: 0;
+  }
+  .carbtn-carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #001F3F;
+    cursor: pointer;
+    font-size: 20px;
+    color: #001F3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,31,63,0.15);
+  }
+  .carbtn-carousel:hover {
+    background: #FFC72C;
+    color: #001F3F;
+  }
+  .carbtn-carousel.prev {
+    left: -22px;
+  }
+  .carbtn-carousel.next {
+    right: -22px;
+  }
+  @media (max-width: 768px) {
+    .carbtn-carousel {
+      display: none;
+    }
+  }
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .animate-in {
+    animation: modalSlideIn 0.3s ease-out;
+  }
 </style>
 </head>
 <body class="antialiased bg-slate-100">
@@ -107,10 +178,10 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   <!-- HERO -->
   <section class="pt-10 sm:pt-16 pb-12 sm:pb-16 bg-gradient-to-b from-navy-900 via-navy-800 to-slate-100 overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <div class="flex flex-col items-center justify-center">
         
-        <!-- ESQUERDA - TEXTO -->
-        <div class="flex-1 text-white">
+        <!-- TEXTO CENTRALIZADO -->
+        <div class="text-white max-w-2xl">
           <div class="inline-flex items-center gap-2 bg-teal-600/20 border border-teal-500 rounded-full px-3 py-1.5 mb-4">
             <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
             <span class="text-xs font-bold">ESPECIALIZADO NESTE CARGO</span>
@@ -126,51 +197,39 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
             95 mapas mentais + <strong>todos os 5 tópicos do Anexo IV</strong> que a banca vai cobrar. Processos Administrativos, Finanças, Logística, Informática e tudo mais.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-8">
-            <a href="#oferta" class="bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold py-4 px-8 rounded-lg transition transform hover:scale-105 text-center">
-              Ver Planos →
-            </a>
-            <a href="#mapas" class="border-2 border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-navy-900 font-bold py-4 px-8 rounded-lg transition text-center">
-              Ver Prévia dos Mapas
-            </a>
+          <!-- BANNER DESTAQUE -->
+          <div class="bg-gold-400/20 border-l-4 border-gold-400 rounded-lg p-4 mb-8 backdrop-blur">
+            <p class="text-gold-300 font-bold text-sm sm:text-base">
+              🚀 Comece hoje: acesso imediato após o pagamento. Estude pelos mapas e passe na prova de 29/11.
+            </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 text-sm">
-            <div class="flex items-center gap-2">
-              <span class="text-gold-400 font-bold">✓</span>
-              <span>Acesso imediato</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-gold-400 font-bold">✓</span>
-              <span>Edital 2026.3</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-gold-400 font-bold">✓</span>
-              <span>Imprimível</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-gold-400 font-bold">✓</span>
-              <span>Vitalício</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- DIREITA - VISUAL -->
-        <div class="flex-1 relative">
-          <div class="bg-gradient-to-br from-teal-500 to-gold-400 rounded-2xl p-8 text-navy-900 shadow-2xl">
-            <div class="text-center">
-              <div class="text-6xl mb-4">📋</div>
-              <h3 class="text-2xl font-bold mb-3">95 Mapas Mentais</h3>
-              <p class="font-semibold mb-6">Administração e Controle<br/>Nível Médio</p>
-              <div class="bg-white/20 rounded-lg p-4 backdrop-blur">
-                <div class="text-sm mb-2">Cobrindo 5 áreas principais:</div>
-                <ul class="text-left space-y-1 text-sm font-semibold">
-                  <li>✓ Processos Administrativos e Legislação</li>
-                  <li>✓ Finanças e Contabilidade</li>
-                  <li>✓ Logística e Cadeias de Suprimento</li>
-                  <li>✓ Noções de Informática</li>
-                  <li>✓ Conhecimentos Gerais (PT + MAT)</li>
-                </ul>
+          <!-- MARQUEE BENEFÍCIOS -->
+          <div class="overflow-hidden bg-white/10 backdrop-blur border border-gold-400/30 rounded-lg">
+            <div class="flex gap-8 animate-scroll whitespace-nowrap py-3 px-4">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Acesso imediato</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Edital 2026.3</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Imprimível</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Vitalício</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Acesso imediato</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="text-gold-400">✓</span>
+                <span>Edital 2026.3</span>
               </div>
             </div>
           </div>
@@ -189,27 +248,27 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-6 rounded-lg">
-          <div class="text-3xl mb-3">📊</div>
-          <h3 class="font-bold text-navy-900 mb-2 text-lg">Processos Administrativos</h3>
+        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-7xl mb-6">📊</div>
+          <h3 class="font-bold text-navy-900 mb-3 text-lg">Processos Administrativos</h3>
           <p class="text-slate-600">O mapa organiza RH, Gestão de Competências, Administração Patrimonial em blocos visuais. Você vê como tudo se conecta — isso é o que cai na prova.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-6 rounded-lg">
-          <div class="text-3xl mb-3">💰</div>
-          <h3 class="font-bold text-navy-900 mb-2 text-lg">Finanças e Contabilidade</h3>
+        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-7xl mb-6">💰</div>
+          <h3 class="font-bold text-navy-900 mb-3 text-lg">Finanças e Contabilidade</h3>
           <p class="text-slate-600">Balanço Patrimonial, Fluxo de Caixa, Demonstrativo de Resultados — o mapa mostra a hierarquia de cada um em uma página só.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-6 rounded-lg">
-          <div class="text-3xl mb-3">🚚</div>
-          <h3 class="font-bold text-navy-900 mb-2 text-lg">Logística e Suprimento</h3>
+        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-7xl mb-6">🚚</div>
+          <h3 class="font-bold text-navy-900 mb-3 text-lg">Logística e Suprimento</h3>
           <p class="text-slate-600">Modalidades de transporte, Gestão de estoques, Lei de Licitações — cada tema em um mapa mental pronto para imprimir e revisar.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-6 rounded-lg">
-          <div class="text-3xl mb-3">💻</div>
-          <h3 class="font-bold text-navy-900 mb-2 text-lg">Legislação + Informática</h3>
+        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-7xl mb-6">💻</div>
+          <h3 class="font-bold text-navy-900 mb-3 text-lg">Legislação + Informática</h3>
           <p class="text-slate-600">LGPD, Lei de Licitações, Windows, Office — tudo que cai em Conhecimentos Específicos já está mapeado e pronto.</p>
         </div>
       </div>
@@ -224,42 +283,94 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         <p class="text-slate-600 mb-8">Estes são exemplos reais do que você recebe para Administração e Controle</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <div class="h-64 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
-            <div class="text-center text-white">
-              <div class="text-5xl mb-2">📋</div>
-              <p class="font-bold text-sm">Processos Administrativos</p>
+      <div class="relative">
+        <button class="carbtn-carousel prev" onclick="slideCarousel(-1, 'carMapas')" aria-label="Anterior">‹</button>
+        <div class="carousel-maps overflow-x-auto scroll-smooth" id="carMapas" style="scroll-behavior: smooth;">
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">📋</div>
+                  <p class="font-bold text-sm">Processos Administrativos</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">RH, Gestão de Competências, Administração Patrimonial</p>
+              </div>
             </div>
           </div>
-          <div class="p-4">
-            <p class="text-sm text-slate-600">Estrutura organizacional, RH, Gestão de Competências, Sistema de Gestão Integrado</p>
-          </div>
-        </div>
 
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <div class="h-64 bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-            <div class="text-center text-white">
-              <div class="text-5xl mb-2">💼</div>
-              <p class="font-bold text-sm">Finanças e Contabilidade</p>
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">💰</div>
+                  <p class="font-bold text-sm">Finanças e Contabilidade</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">Balanço, Fluxo de Caixa, Demonstrativo de Resultados</p>
+              </div>
             </div>
           </div>
-          <div class="p-4">
-            <p class="text-sm text-slate-600">Balanço Patrimonial, Fluxo de Caixa, Matemática Financeira, Registros Contábeis</p>
-          </div>
-        </div>
 
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-700 flex items-center justify-center">
-            <div class="text-center text-white">
-              <div class="text-5xl mb-2">🌐</div>
-              <p class="font-bold text-sm">Legislação + Informática</p>
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-700 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">🚚</div>
+                  <p class="font-bold text-sm">Logística e Suprimento</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">Transportes, Estoques, Lei de Licitações</p>
+              </div>
             </div>
           </div>
-          <div class="p-4">
-            <p class="text-sm text-slate-600">Lei de Licitações, LGPD, Windows 11, Office, Internet e Segurança</p>
+
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">💻</div>
+                  <p class="font-bold text-sm">Informática e LGPD</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">Windows, Office, Segurança de Informação</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">📝</div>
+                  <p class="font-bold text-sm">Português</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">Interpretação, Gramática, Ortografia Oficial</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide-map min-w-80">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+              <div class="h-64 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-5xl mb-2">🔢</div>
+                  <p class="font-bold text-sm">Matemática</p>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-slate-600">Aritmética, Proporção, Porcentagem, Funções</p>
+              </div>
+            </div>
           </div>
         </div>
+        <button class="carbtn-carousel next" onclick="slideCarousel(1, 'carMapas')" aria-label="Próximo">›</button>
       </div>
 
       <div class="text-center mt-10">
@@ -320,42 +431,61 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
           </div>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900 to-navy-800 text-white p-8 rounded-2xl">
-          <h3 class="text-2xl font-bold mb-6">+ 4 Bônus Exclusivos (Plano Completo)</h3>
-          
-          <ul class="space-y-4">
-            <li class="flex gap-3 items-start">
-              <span class="text-gold-400 text-2xl">📅</span>
-              <div>
-                <p class="font-bold">Cronograma de Revisão</p>
-                <p class="text-sm text-slate-300">Dia a dia até 29/11 — qual mapa estudar cada dia</p>
-              </div>
-            </li>
+      </div>
+    </div>
+  </section>
 
-            <li class="flex gap-3 items-start">
-              <span class="text-gold-400 text-2xl">❓</span>
-              <div>
-                <p class="font-bold">50 Questões Comentadas</p>
-                <p class="text-sm text-slate-300">Português + Matemática no padrão Cesgranrio</p>
-              </div>
-            </li>
+  <!-- BÔNUS GRÁTIS -->
+  <section class="py-14 sm:py-20 bg-gradient-to-b from-white to-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">+ 4 Bônus Exclusivos</h2>
+        <p class="text-slate-600 text-lg">Inclusos no Plano Completo</p>
+      </div>
 
-            <li class="flex gap-3 items-start">
-              <span class="text-gold-400 text-2xl">⏱️</span>
-              <div>
-                <p class="font-bold">Simulado 4 Horas</p>
-                <p class="text-sm text-slate-300">60 questões cronometradas no formato real da prova</p>
-              </div>
-            </li>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <div class="h-40 bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center">
+            <div class="text-6xl">📅</div>
+          </div>
+          <div class="p-5 text-center">
+            <span class="inline-block bg-gold-400/20 text-gold-600 text-xs font-bold px-3 py-1 rounded-full mb-3">GRÁTIS</span>
+            <h3 class="font-bold text-navy-900 text-base mb-2">Cronograma de Revisão</h3>
+            <p class="text-sm text-slate-600">Dia a dia até 29/11 — qual mapa estudar cada dia</p>
+          </div>
+        </div>
 
-            <li class="flex gap-3 items-start">
-              <span class="text-gold-400 text-2xl">✅</span>
-              <div>
-                <p class="font-bold">Checklist do Edital</p>
-                <p class="text-sm text-slate-300">Marque conforme você estuda — nunca mais perde um tópico</p>
-              </div>
-            </li>
-          </ul>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <div class="h-40 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+            <div class="text-6xl">❓</div>
+          </div>
+          <div class="p-5 text-center">
+            <span class="inline-block bg-teal-500/20 text-teal-700 text-xs font-bold px-3 py-1 rounded-full mb-3">GRÁTIS</span>
+            <h3 class="font-bold text-navy-900 text-base mb-2">50 Questões Comentadas</h3>
+            <p class="text-sm text-slate-600">Português + Matemática no padrão Cesgranrio</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <div class="h-40 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
+            <div class="text-6xl">⏱️</div>
+          </div>
+          <div class="p-5 text-center">
+            <span class="inline-block bg-navy-900/20 text-navy-900 text-xs font-bold px-3 py-1 rounded-full mb-3">GRÁTIS</span>
+            <h3 class="font-bold text-navy-900 text-base mb-2">Simulado 4 Horas</h3>
+            <p class="text-sm text-slate-600">60 questões cronometradas no formato real da prova</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <div class="h-40 bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center">
+            <div class="text-6xl">✅</div>
+          </div>
+          <div class="p-5 text-center">
+            <span class="inline-block bg-teal-600/20 text-teal-700 text-xs font-bold px-3 py-1 rounded-full mb-3">GRÁTIS</span>
+            <h3 class="font-bold text-navy-900 text-base mb-2">Checklist do Edital</h3>
+            <p class="text-sm text-slate-600">Marque conforme você estuda — nunca mais perde um tópico</p>
+          </div>
         </div>
       </div>
     </div>
@@ -417,11 +547,10 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
               </li>
             </ul>
 
-            <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_SIMPLES_10&checkoutMode=10" 
-               onclick="fbq('track', 'AddToCart', {value: 10, currency: 'BRL'}); fbq('track', 'InitiateCheckout');" 
+            <button onclick="openUpsellModal()" 
                class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition block text-center mb-4">
               Começar com R$ 10
-            </a>
+            </button>
 
             <p class="text-xs text-slate-500 text-center">Acesso imediato • Pix ou Cartão</p>
           </div>
@@ -482,6 +611,57 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
     </div>
   </section>
 
+  <!-- MODAL UPSELL -->
+  <div id="upsellModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full animate-in">
+      <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-6 flex justify-between items-center">
+        <h2 class="text-2xl font-bold">Espera aí! 🎁</h2>
+        <button onclick="closeUpsellModal()" class="text-2xl font-bold cursor-pointer hover:opacity-70">×</button>
+      </div>
+      
+      <div class="p-8 text-center">
+        <p class="text-slate-600 mb-6 leading-relaxed">
+          Você escolheu o plano básico, mas <strong>por apenas R$ 17,90 a mais</strong> você leva os 4 bônus exclusivos:
+        </p>
+
+        <ul class="text-left space-y-3 mb-8 text-sm">
+          <li class="flex items-center gap-2">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span><strong>Cronograma de Revisão</strong> (dia a dia até 29/11)</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span><strong>50 Questões Comentadas</strong> (padrão Cesgranrio)</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span><strong>Simulado 4 Horas</strong> (60 questões cronometradas)</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span><strong>Checklist do Edital</strong> (acompanhe seu progresso)</span>
+          </li>
+        </ul>
+
+        <div class="mb-6">
+          <div class="text-sm text-slate-500 line-through mb-1">De R$ 45</div>
+          <div class="text-4xl font-bold text-gold-500">R$ 17,90</div>
+          <p class="text-slate-600 text-sm mt-1">Apenas R$ 5,97 por bônus</p>
+        </div>
+
+        <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_COMPLETO_2790&checkoutMode=10" 
+           onclick="fbq('track', 'AddToCart', {value: 27.90, currency: 'BRL'}); closeUpsellModal();" 
+           class="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold py-4 px-6 rounded-lg transition block mb-3">
+          Aproveitar Oferta • R$ 17,90 a Mais
+        </a>
+
+        <button onclick="closeUpsellModal()" class="w-full text-slate-600 hover:text-slate-800 font-semibold py-2 transition">
+          Manter R$ 10
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- GARANTIA -->
   <section class="py-14 sm:py-20 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
@@ -528,6 +708,36 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   </footer>
 
   <script>
+    // MODAL UPSELL
+    function openUpsellModal() {
+      fbq('track', 'AddToCart', {value: 10, currency: 'BRL'});
+      fbq('track', 'InitiateCheckout');
+      document.getElementById('upsellModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeUpsellModal() {
+      document.getElementById('upsellModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar modal ao clicar no background
+    document.getElementById('upsellModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeUpsellModal();
+      }
+    });
+
+    // CARROSSEL DE MAPAS
+    function slideCarousel(direction, id) {
+      const carousel = document.getElementById(id);
+      const slideWidth = carousel.querySelector('.carousel-slide-map').offsetWidth + 24; // 24 = gap
+      carousel.scrollBy({
+        left: direction * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+
     // SCROLL SUAVE
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
