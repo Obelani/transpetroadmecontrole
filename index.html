@@ -75,6 +75,15 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
 </script>
 
 <style>
+  /* RESPONSIVIDADE GLOBAL */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  * {
+    max-width: 100%;
+  }
+  
   .gradient-navy-gold {
     background: linear-gradient(135deg, #001F3F 0%, #003366 50%, #FFC72C 100%);
   }
@@ -110,6 +119,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
     padding: 1.5rem 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
   }
   .carousel-maps::-webkit-scrollbar {
     display: none;
@@ -216,16 +226,17 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
           </p>
 
           <!-- BANNER DESTAQUE -->
-          <div class="mb-6 sm:mb-8 w-full max-w-lg mx-auto">
-            <img src="banner_1.webp" alt="Banner de urgência" class="w-full h-auto rounded-lg object-cover" onerror="this.style.display='none'">
+          <div class="mb-6 sm:mb-8 w-full max-w-xl mx-auto px-3 sm:px-4">
+            <img src="banner_1.webp" alt="Banner de urgência" class="w-full h-auto rounded-lg shadow-lg object-cover" onerror="this.style.display='none'">
           </div>
 
           <!-- MARQUEE BENEFÍCIOS -->
-          <div class="overflow-hidden bg-white/10 backdrop-blur border border-gold-400/30 rounded-lg">
-            <div class="flex gap-4 sm:gap-6 md:gap-8 animate-scroll whitespace-nowrap py-2 sm:py-3 px-3 sm:px-4 text-xs sm:text-sm">
+          <div class="overflow-hidden bg-white/10 backdrop-blur border border-gold-400/30 rounded-lg w-full">
+            <div class="flex gap-3 sm:gap-4 md:gap-6 animate-scroll whitespace-nowrap py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm md:text-base">
               <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
-                <span>Acesso imediato</span>
+                <span class="hidden sm:inline">Acesso imediato</span>
+                <span class="sm:hidden">Acesso</span>
               </div>
               <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
@@ -241,7 +252,8 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
               </div>
               <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
-                <span>Acesso imediato</span>
+                <span class="hidden sm:inline">Acesso imediato</span>
+                <span class="sm:hidden">Acesso</span>
               </div>
             </div>
           </div>
@@ -259,29 +271,29 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         <p class="text-slate-600 text-lg">Especialmente para Administração e Controle, onde a prova cobra definições, processos e legislação</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-8 rounded-lg flex flex-col items-center text-center">
-          <div class="text-7xl mb-6">📊</div>
-          <h3 class="font-bold text-navy-900 mb-3 text-lg">Processos Administrativos</h3>
-          <p class="text-slate-600">O mapa organiza RH, Gestão de Competências, Administração Patrimonial em blocos visuais. Você vê como tudo se conecta — isso é o que cai na prova.</p>
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6">📊</div>
+          <h3 class="font-bold text-navy-900 mb-2 sm:mb-3 text-base sm:text-lg">Processos Administrativos</h3>
+          <p class="text-sm sm:text-base text-slate-600">O mapa organiza RH, Gestão de Competências, Administração Patrimonial em blocos visuais. Você vê como tudo se conecta — isso é o que cai na prova.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-8 rounded-lg flex flex-col items-center text-center">
-          <div class="text-7xl mb-6">💰</div>
-          <h3 class="font-bold text-navy-900 mb-3 text-lg">Finanças e Contabilidade</h3>
-          <p class="text-slate-600">Balanço Patrimonial, Fluxo de Caixa, Demonstrativo de Resultados — o mapa mostra a hierarquia de cada um em uma página só.</p>
+        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6">💰</div>
+          <h3 class="font-bold text-navy-900 mb-2 sm:mb-3 text-base sm:text-lg">Finanças e Contabilidade</h3>
+          <p class="text-sm sm:text-base text-slate-600">Balanço Patrimonial, Fluxo de Caixa, Demonstrativo de Resultados — o mapa mostra a hierarquia de cada um em uma página só.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-8 rounded-lg flex flex-col items-center text-center">
-          <div class="text-7xl mb-6">🚚</div>
-          <h3 class="font-bold text-navy-900 mb-3 text-lg">Logística e Suprimento</h3>
-          <p class="text-slate-600">Modalidades de transporte, Gestão de estoques, Lei de Licitações — cada tema em um mapa mental pronto para imprimir e revisar.</p>
+        <div class="bg-gradient-to-br from-navy-900/10 to-teal-500/10 border-l-4 border-teal-500 p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6">🚚</div>
+          <h3 class="font-bold text-navy-900 mb-2 sm:mb-3 text-base sm:text-lg">Logística e Suprimento</h3>
+          <p class="text-sm sm:text-base text-slate-600">Modalidades de transporte, Gestão de estoques, Lei de Licitações — cada tema em um mapa mental pronto para imprimir e revisar.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-8 rounded-lg flex flex-col items-center text-center">
-          <div class="text-7xl mb-6">💻</div>
-          <h3 class="font-bold text-navy-900 mb-3 text-lg">Legislação + Informática</h3>
-          <p class="text-slate-600">LGPD, Lei de Licitações, Windows, Office — tudo que cai em Conhecimentos Específicos já está mapeado e pronto.</p>
+        <div class="bg-gradient-to-br from-navy-900/10 to-gold-400/10 border-l-4 border-gold-400 p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-center text-center">
+          <div class="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6">💻</div>
+          <h3 class="font-bold text-navy-900 mb-2 sm:mb-3 text-base sm:text-lg">Legislação + Informática</h3>
+          <p class="text-sm sm:text-base text-slate-600">LGPD, Lei de Licitações, Windows, Office — tudo que cai em Conhecimentos Específicos já está mapeado e pronto.</p>
         </div>
       </div>
     </div>
@@ -290,13 +302,13 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   <!-- MAPAS PREVIEW -->
   <section id="mapas" class="py-14 sm:py-20 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Veja como são os mapas</h2>
-        <p class="text-slate-600 mb-8">Estes são exemplos reais do que você recebe para Administração e Controle</p>
+      <div class="text-center mb-10 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">Veja como são os mapas</h2>
+        <p class="text-sm sm:text-base text-slate-600">Estes são exemplos reais do que você recebe para Administração e Controle</p>
       </div>
 
       <div class="relative -mx-4 sm:mx-0">
-        <div class="carousel-maps overflow-x-auto scroll-smooth px-4 sm:px-0" id="carMapas" style="scroll-behavior: smooth;">
+        <div class="carousel-maps overflow-x-auto scroll-smooth px-3 sm:px-4" id="carMapas" style="scroll-behavior: smooth;">
           <div class="carousel-slide-map min-w-full sm:min-w-96">
             <div class="bg-white rounded-xl shadow-lg overflow-hidden h-72 sm:h-96 md:h-[28rem] flex flex-col">
               <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-4 sm:p-6">
@@ -372,13 +384,13 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   <!-- O QUE VEM NO PACOTE -->
   <section class="py-14 sm:py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Tudo o que você recebe</h2>
+      <div class="text-center mb-10 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-4">Tudo o que você recebe</h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-10">
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10">
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-navy-900 mb-6">Os 95 Mapas divididos em:</h3>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-navy-900 mb-4 sm:mb-6">Os 95 Mapas divididos em:</h3>
           
           <div class="flex gap-3 items-start">
             <div class="flex-shrink-0 w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-sm">1</div>
@@ -822,58 +834,40 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   </footer>
 
   <script>
-    // CARROSSEL AUTOMÁTICO
+    // CARROSSEL AUTOMÁTICO - SUAVE TIPO VIDEO
     function initAutoCarousel() {
       const carousel = document.getElementById('carMapas');
       if (!carousel) return;
 
       let scrollPosition = 0;
-      let isAutoScroll = true;
-      let lastScrollTime = Date.now();
-      const slideWidth = carousel.querySelector('.carousel-slide-map').offsetWidth;
-      const gapWidth = 24; // gap size in pixels
-      const speed = 60; // pixels per iteration (aumentado 20%)
-      const interval = 42; // ms between iterations (reduzido 20%)
-      let autoScrollInterval;
-
-      function autoScroll() {
-        if (!isAutoScroll) return;
+      let lastTime = 0;
+      const pixelsPerSecond = 120; // velocidade em pixels por segundo
+      
+      function animate(currentTime) {
+        if (lastTime === 0) lastTime = currentTime;
+        const deltaTime = (currentTime - lastTime) / 1000; // converter para segundos
+        lastTime = currentTime;
         
-        scrollPosition += speed;
-        carousel.scrollLeft = scrollPosition;
-
+        // Aumentar posição baseado no tempo decorrido
+        scrollPosition += pixelsPerSecond * deltaTime;
+        
         // Reset ao chegar no final
         if (scrollPosition >= carousel.scrollWidth - carousel.clientWidth) {
           scrollPosition = 0;
-          carousel.scrollLeft = 0;
         }
+        
+        // Aplicar scroll
+        carousel.scrollLeft = scrollPosition;
+        
+        // Continuar animação
+        requestAnimationFrame(animate);
       }
-
-      // Iniciar scroll automático
-      autoScrollInterval = setInterval(autoScroll, interval);
-
-      // Pausar ao interagir
-      carousel.addEventListener('mouseenter', () => {
-        isAutoScroll = false;
-        clearInterval(autoScrollInterval);
-      });
-
-      carousel.addEventListener('mouseleave', () => {
-        isAutoScroll = true;
-        autoScrollInterval = setInterval(autoScroll, interval);
-      });
-
-      carousel.addEventListener('touchstart', () => {
-        isAutoScroll = false;
-        clearInterval(autoScrollInterval);
-      });
-
-      carousel.addEventListener('touchend', () => {
-        setTimeout(() => {
-          isAutoScroll = true;
-          autoScrollInterval = setInterval(autoScroll, interval);
-        }, 1000);
-      });
+      
+      // Iniciar animação
+      requestAnimationFrame(animate);
+      
+      // Remover pointer-events para impedir cliques
+      carousel.style.pointerEvents = 'none';
     }
 
     // Iniciar quando página carrega
