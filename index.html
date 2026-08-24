@@ -164,6 +164,24 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   .animate-in {
     animation: modalSlideIn 0.3s ease-out;
   }
+  
+  /* CARROSSEL AUTOMÁTICO */
+  @keyframes autoScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .carousel-maps.auto-scroll {
+    animation: none;
+  }
+  
+  .carousel-maps.auto-scroll .carousel-slide-map:nth-child(n+9) {
+    animation: autoScroll 60s linear infinite;
+  }
 </style>
 </head>
 <body class="antialiased bg-slate-100">
@@ -176,58 +194,54 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   </div>
 
   <!-- HERO -->
-  <section class="pt-10 sm:pt-16 pb-12 sm:pb-16 bg-gradient-to-b from-navy-900 via-navy-800 to-slate-100 overflow-hidden">
+  <section class="pt-6 sm:pt-10 md:pt-16 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-b from-navy-900 via-navy-800 to-slate-100 overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="flex flex-col items-center justify-center">
         
         <!-- TEXTO CENTRALIZADO -->
-        <div class="text-white max-w-2xl">
-          <div class="inline-flex items-center gap-2 bg-teal-600/20 border border-teal-500 rounded-full px-3 py-1.5 mb-4">
-            <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <span class="text-xs font-bold">ESPECIALIZADO NESTE CARGO</span>
+        <div class="text-white max-w-2xl text-center">
+          <div class="inline-flex items-center gap-2 bg-teal-600/20 border border-teal-500 rounded-full px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs">
+            <svg class="w-3 h-3 sm:w-4 sm:h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span class="font-bold">ESPECIALIZADO NESTE CARGO</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6">
             Domine 
             <span class="shine-text">Administração e Controle</span>
             <br/>na TRANSPETRO
           </h1>
 
-          <p class="text-lg text-slate-200 mb-8 leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg text-slate-200 mb-6 sm:mb-8 leading-relaxed">
             95 mapas mentais + <strong>todos os 5 tópicos do Anexo IV</strong> que a banca vai cobrar. Processos Administrativos, Finanças, Logística, Informática e tudo mais.
           </p>
 
           <!-- BANNER DESTAQUE -->
-          <div class="mb-8">
-            <img src="banner_1.webp" alt="Banner de urgência" class="w-full max-w-md rounded-lg object-cover" onerror="this.style.display='none'">
+          <div class="mb-6 sm:mb-8 w-full">
+            <img src="banner_1.webp" alt="Banner de urgência" class="w-full h-auto rounded-lg object-cover" onerror="this.style.display='none'">
           </div>
 
           <!-- MARQUEE BENEFÍCIOS -->
           <div class="overflow-hidden bg-white/10 backdrop-blur border border-gold-400/30 rounded-lg">
-            <div class="flex gap-8 animate-scroll whitespace-nowrap py-3 px-4">
-              <div class="flex items-center gap-2 text-sm font-semibold">
+            <div class="flex gap-4 sm:gap-6 md:gap-8 animate-scroll whitespace-nowrap py-2 sm:py-3 px-3 sm:px-4 text-xs sm:text-sm">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
                 <span>Acesso imediato</span>
               </div>
-              <div class="flex items-center gap-2 text-sm font-semibold">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
                 <span>Edital 2026.3</span>
               </div>
-              <div class="flex items-center gap-2 text-sm font-semibold">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
                 <span>Imprimível</span>
               </div>
-              <div class="flex items-center gap-2 text-sm font-semibold">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
                 <span>Vitalício</span>
               </div>
-              <div class="flex items-center gap-2 text-sm font-semibold">
+              <div class="flex items-center gap-1 sm:gap-2 font-semibold flex-shrink-0">
                 <span class="text-gold-400">✓</span>
                 <span>Acesso imediato</span>
-              </div>
-              <div class="flex items-center gap-2 text-sm font-semibold">
-                <span class="text-gold-400">✓</span>
-                <span>Edital 2026.3</span>
               </div>
             </div>
           </div>
@@ -281,98 +295,98 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
         <p class="text-slate-600 mb-8">Estes são exemplos reais do que você recebe para Administração e Controle</p>
       </div>
 
-      <div class="relative">
-        <button class="carbtn-carousel prev" onclick="slideCarousel(-1, 'carMapas')" aria-label="Anterior">‹</button>
-        <div class="carousel-maps overflow-x-auto scroll-smooth" id="carMapas" style="scroll-behavior: smooth;">
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center overflow-hidden p-4">
+      <div class="relative -mx-4 sm:mx-0">
+        <button class="carbtn-carousel prev hidden sm:flex" onclick="slideCarousel(-1, 'carMapas')" aria-label="Anterior">‹</button>
+        <div class="carousel-maps overflow-x-auto scroll-smooth px-4 sm:px-0" id="carMapas" style="scroll-behavior: smooth;">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra1.webp" alt="Processos Administrativos" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">RH, Gestão de Competências, Administração Patrimonial</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">RH, Gestão de Competências, Administração Patrimonial</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra2.webp" alt="Finanças e Contabilidade" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Balanço, Fluxo de Caixa, Demonstrativo de Resultados</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Balanço, Fluxo de Caixa, Demonstrativo de Resultados</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-navy-900 to-navy-700 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra3.webp" alt="Logística e Suprimento" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Transportes, Estoques, Lei de Licitações</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Transportes, Estoques, Lei de Licitações</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra4.webp" alt="Informática e LGPD" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Windows, Office, Segurança de Informação</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Windows, Office, Segurança de Informação</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra5.webp" alt="Português" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Interpretação, Gramática, Ortografia Oficial</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Interpretação, Gramática, Ortografia Oficial</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra6.webp" alt="Matemática" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Aritmética, Proporção, Porcentagem, Funções</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Aritmética, Proporção, Porcentagem, Funções</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra7.webp" alt="Lei de Licitações" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">Lei 8.666/93, Modalidades, Procedimentos</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">Lei 8.666/93, Modalidades, Procedimentos</p>
               </div>
             </div>
           </div>
 
-          <div class="carousel-slide-map min-w-80">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-80 flex flex-col">
-              <div class="flex-1 bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center overflow-hidden p-4">
+          <div class="carousel-slide-map min-w-full sm:min-w-96">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden h-64 sm:h-80 flex flex-col">
+              <div class="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden p-3 sm:p-4">
                 <img src="amostra8.webp" alt="Gestão de Pessoas" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'">
               </div>
-              <div class="p-4">
-                <p class="text-xs text-slate-600">RH, Competências, Desenvolvimento de Talentos</p>
+              <div class="px-4 py-3 bg-white">
+                <p class="text-xs sm:text-sm text-slate-600 text-center">RH, Competências, Desenvolvimento de Talentos</p>
               </div>
             </div>
           </div>
         </div>
-        <button class="carbtn-carousel next" onclick="slideCarousel(1, 'carMapas')" aria-label="Próximo">›</button>
+        <button class="carbtn-carousel next hidden sm:flex" onclick="slideCarousel(1, 'carMapas')" aria-label="Próximo">›</button>
       </div>
 
       <div class="text-center mt-10">
@@ -524,33 +538,33 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
             <p class="text-slate-200 text-sm">O essencial para passar</p>
           </div>
 
-          <div class="p-8">
-            <div class="mb-8">
-              <div class="text-5xl font-bold text-teal-600 mb-2">R$ 10</div>
-              <p class="text-slate-600 text-sm">Pagamento único</p>
+          <div class="p-4 sm:p-6 md:p-8">
+            <div class="mb-6 sm:mb-8">
+              <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-600 mb-2">R$ 10</div>
+              <p class="text-xs sm:text-sm text-slate-600">Pagamento único</p>
             </div>
 
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <span class="text-teal-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>95 Mapas Mentais</strong><br/><span class="text-sm text-slate-600">Administração e Controle completo</span></span>
+            <ul class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>95 Mapas Mentais</strong><br/><span class="text-xs sm:text-sm text-slate-600">Administração e Controle completo</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-teal-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>Português + Matemática</strong><br/><span class="text-sm text-slate-600">Conhecimentos básicos mapeados</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>Português + Matemática</strong><br/><span class="text-xs sm:text-sm text-slate-600">Conhecimentos básicos mapeados</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-teal-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>100% Edital 2026.3</strong><br/><span class="text-sm text-slate-600">Nenhum tópico foi deixado de fora</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>100% Edital 2026.3</strong><br/><span class="text-xs sm:text-sm text-slate-600">Nenhum tópico foi deixado de fora</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-teal-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>Acesso Vitalício</strong><br/><span class="text-sm text-slate-600">Seu material para sempre</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-teal-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>Acesso Vitalício</strong><br/><span class="text-xs sm:text-sm text-slate-600">Seu material para sempre</span></span>
               </li>
             </ul>
 
             <button onclick="openUpsellModal()" 
-               class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition block text-center mb-4">
+               class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base">
               Começar com R$ 10
             </button>
 
@@ -564,40 +578,40 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
             ⭐ Mais Recomendado
           </div>
 
-          <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-8">
-            <h3 class="text-2xl font-bold mb-2">Plano Completo</h3>
-            <p class="text-navy-800 font-semibold">Tudo para sua aprovação GARANTIDA</p>
+          <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 p-4 sm:p-6 md:p-8">
+            <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Plano Completo</h3>
+            <p class="text-sm sm:text-base font-semibold">Tudo para sua aprovação GARANTIDA</p>
           </div>
 
-          <div class="p-8">
-            <div class="mb-8">
-              <div class="text-sm text-slate-500 line-through mb-1">De R$ 69</div>
-              <div class="text-5xl font-bold text-gold-500 mb-2">R$ 27,90</div>
-              <p class="text-slate-600 text-sm">ou 3x de R$ 9,30</p>
+          <div class="p-4 sm:p-6 md:p-8">
+            <div class="mb-6 sm:mb-8">
+              <div class="text-xs sm:text-sm text-slate-500 line-through mb-1">De R$ 69</div>
+              <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gold-500 mb-2">R$ 27,90</div>
+              <p class="text-xs sm:text-sm text-slate-600">ou 3x de R$ 9,30</p>
             </div>
 
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <span class="text-gold-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>95 Mapas + 4 Bônus</strong><br/><span class="text-sm text-slate-600">Cronograma, Questões, Simulado, Checklist</span></span>
+            <ul class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>95 Mapas + 4 Bônus</strong><br/><span class="text-xs sm:text-sm text-slate-600">Cronograma, Questões, Simulado, Checklist</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-gold-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>Pegadinhas Desarmadas</strong><br/><span class="text-sm text-slate-600">Saiba o que a Cesgranrio costuma cobrar</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>Pegadinhas Desarmadas</strong><br/><span class="text-xs sm:text-sm text-slate-600">Saiba o que a Cesgranrio costuma cobrar</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-gold-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>Simulado 4 Horas</strong><br/><span class="text-sm text-slate-600">60 questões no formato real da prova</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>Simulado 4 Horas</strong><br/><span class="text-xs sm:text-sm text-slate-600">60 questões no formato real da prova</span></span>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="text-gold-500 font-bold text-lg">✓</span>
-                <span class="text-slate-700"><strong>Garantia 7 dias</strong><br/><span class="text-sm text-slate-600">Ou seu dinheiro de volta, sem pergunta</span></span>
+              <li class="flex items-start gap-2 sm:gap-3">
+                <span class="text-gold-500 font-bold text-lg flex-shrink-0">✓</span>
+                <span class="text-slate-700 text-sm sm:text-base"><strong>Garantia 7 dias</strong><br/><span class="text-xs sm:text-sm text-slate-600">Ou seu dinheiro de volta, sem pergunta</span></span>
               </li>
             </ul>
 
             <a href="https://pay.hotmart.com/L107234787E?offerId=ADMIN_COMPLETO_2790&checkoutMode=10" 
                onclick="fbq('track', 'AddToCart', {value: 27.90, currency: 'BRL'}); fbq('track', 'InitiateCheckout');" 
-               class="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold py-4 px-6 rounded-lg transition block text-center mb-4 text-lg">
+               class="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition block text-center mb-3 sm:mb-4 text-sm sm:text-base md:text-lg">
               Garantir Aprovação • R$ 27,90
             </a>
 
@@ -838,6 +852,63 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
   </footer>
 
   <script>
+    // CARROSSEL AUTOMÁTICO
+    function initAutoCarousel() {
+      const carousel = document.getElementById('carMapas');
+      if (!carousel) return;
+
+      let scrollPosition = 0;
+      let isAutoScroll = true;
+      let lastScrollTime = Date.now();
+      const slideWidth = carousel.querySelector('.carousel-slide-map').offsetWidth;
+      const gapWidth = 24; // gap size in pixels
+      const speed = 50; // pixels per iteration
+      const interval = 50; // ms between iterations
+      let autoScrollInterval;
+
+      function autoScroll() {
+        if (!isAutoScroll) return;
+        
+        scrollPosition += speed;
+        carousel.scrollLeft = scrollPosition;
+
+        // Reset ao chegar no final
+        if (scrollPosition >= carousel.scrollWidth - carousel.clientWidth) {
+          scrollPosition = 0;
+          carousel.scrollLeft = 0;
+        }
+      }
+
+      // Iniciar scroll automático
+      autoScrollInterval = setInterval(autoScroll, interval);
+
+      // Pausar ao interagir
+      carousel.addEventListener('mouseenter', () => {
+        isAutoScroll = false;
+        clearInterval(autoScrollInterval);
+      });
+
+      carousel.addEventListener('mouseleave', () => {
+        isAutoScroll = true;
+        autoScrollInterval = setInterval(autoScroll, interval);
+      });
+
+      carousel.addEventListener('touchstart', () => {
+        isAutoScroll = false;
+        clearInterval(autoScrollInterval);
+      });
+
+      carousel.addEventListener('touchend', () => {
+        setTimeout(() => {
+          isAutoScroll = true;
+          autoScrollInterval = setInterval(autoScroll, interval);
+        }, 1000);
+      });
+    }
+
+    // Iniciar quando página carrega
+    document.addEventListener('DOMContentLoaded', initAutoCarousel);
+
     // MODAL UPSELL
     function openUpsellModal() {
       fbq('track', 'AddToCart', {value: 10, currency: 'BRL'});
@@ -858,7 +929,7 @@ src="https://www.facebook.com/tr?id=4555996237989507&ev=PageView&noscript=1"
       }
     });
 
-    // CARROSSEL DE MAPAS
+    // CARROSSEL DE MAPAS (navegação com setas)
     function slideCarousel(direction, id) {
       const carousel = document.getElementById(id);
       const slideWidth = carousel.querySelector('.carousel-slide-map').offsetWidth + 24; // 24 = gap
